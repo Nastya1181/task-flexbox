@@ -4,3 +4,33 @@ body,
     height: 100%;
     margin: 0;
 }
+
+.flex-container {
+    display: flex;
+    width: 700px;
+    height: 300px;
+    justify-content: space-between;
+}
+
+.flex-container div {
+    width: 100px;
+    height: 100px;
+    background-color: #daa520;
+    border-radius: 50%;
+}
+
+.flex-container div:nth-child(1),
+div:nth-child(5) {
+    /* Еще так можно было - .flex-container div:first-child, div:last-child */
+    align-self: flex-start; /* Еще так можно было - margin-bottom: auto;  */
+}
+
+.flex-container div:nth-child(2),
+div:nth-child(4) {
+    /* Еще так можно было - .flex-container div:nth-child(even) */
+    align-self: center; /* Еще так можно было - margin: auto 0; */
+}
+
+.flex-container div:nth-child(3) {
+    align-self: flex-end; /* Еще так можно было - margin-top: auto; */
+}
